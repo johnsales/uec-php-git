@@ -41,8 +41,8 @@ and open the template in the editor.
                       <ul class="dropdown-menu">
                         <li><a href="cadastroLuta.php">Cadastro</a></li>
                         <li><a href="#">Listagem</a></li>
-                      </ul>
-                    </li>
+                     </ul>
+                    </li> 
                   </ul>
                 </div>
             </nav>    
