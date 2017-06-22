@@ -39,7 +39,7 @@ and open the template in the editor.
                       <a class="dropdown-toggle" data-toggle="dropdown" href="#">Luta
                       <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                        <li><a href="#">Cadastro</a></li>
+                        <li><a href="cadastroLuta.php">Cadastro</a></li>
                         <li><a href="#">Listagem</a></li>
                       </ul>
                     </li>
