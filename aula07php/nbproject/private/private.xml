@@ -3,9 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp2/htdocs/aula07php/cadastroLutador.php</file>
-            <file>file:/C:/xampp2/htdocs/aula07php/inserirLutador.php</file>
-            <file>file:/C:/xampp2/htdocs/aula07php/Lutador.php</file>
+            <file>file:/C:/xampp2/htdocs/github/aula07php/inserirLuta.php</file>
+            <file>file:/C:/xampp2/htdocs/github/aula07php/Lutador.php</file>
+            <file>file:/C:/xampp2/htdocs/github/aula07php/listaLuta.php</file>
+            <file>file:/C:/xampp2/htdocs/github/aula07php/cadastroLuta.php</file>
         </group>
     </open-files>
 </project-private>

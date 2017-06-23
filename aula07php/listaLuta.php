@@ -42,17 +42,14 @@
                   </ul>
                 </div>
             </nav>
-                <h2>Lista de Lutadores</h2>
+                <h2>Lista de Lutas</h2>
               <table class="table">
                 <thead>
                   <tr>
-                    <th>CPF</th>
-                    <th>Nome</th>
-                    <th>Nacionalidade</th>
-                    <th>Idade</th>
-                    <th>Altura</th>
-                    <th>Peso</th>
-                    <th>Categoria</th>
+                    <th>Desafiado</th>
+                    <th>Desafiante</th>
+                    <th>Rounds</th>
+                    <th>Aprovada</th>
                     <th>Alterar</th>
                     <th>Excluir</th>
                   </tr>
@@ -60,20 +57,16 @@
 
             <?php 
                 include '../conecta.php';
-                $seleciona = mysqli_query($conexao, "select * from lutador");
+                $seleciona = mysqli_query($conexao, "select * from luta");
                     while ($campo = mysqli_fetch_array($seleciona)) {?>
                     <tbody>
                         <tr>
-                          <td><?=$campo['cpf'] ?></td>
-                          <td><?=$campo['nome'] ?></td>
-                          <td><?=$campo['nacionalidade'] ?></td>
-                          <td><?=$campo['idade'] ?></td>
-                          <td><?=$campo['altura'] ?></td>
-                          <td><?=$campo['peso'] ?></td>
-                          <td><?=$campo['categoria'] ?></td>
+                          <td><?=$campo['cpf_desafiado'] ?></td>
+                          <td><?=$campo['cpf_desafiante'] ?></td>
+                          <td><?=$campo['rounds'] ?></td>
+                          <td><?=$campo['aprovada'] ?></td>
                           <td  align="center" ><a href="editarLutador.php?editCpf=<?=$campo['cpf'] ?>"> <i class="fa fa-edit"> </i></a></td>
-                          <td  align="center" ><a href="#" onclick="verifica(<?=$campo['cpf']?>)"> <i class="fa fa-trash-o"></i> </a></td>
-                          
+                          <td  align="center" ><a href="#" onclick="verifica(<?=$campo['id']?>)"> <i class="fa fa-trash-o"></i> </a></td>                          
                         </tr>
                     </tbody>
                     <?php } ?>
