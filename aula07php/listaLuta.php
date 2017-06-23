@@ -65,7 +65,7 @@
                           <td><?=$campo['cpf_desafiante'] ?></td>
                           <td><?=$campo['rounds'] ?></td>
                           <td><?=$campo['aprovada'] ?></td>
-                          <td  align="center" ><a href="editarLutador.php?editCpf=<?=$campo['cpf'] ?>"> <i class="fa fa-edit"> </i></a></td>
+                          <td  align="center" ><a href="editarLuta.php?editId=<?=$campo['id'] ?>"> <i class="fa fa-edit"> </i></a></td>
                           <td  align="center" ><a href="#" onclick="verifica(<?=$campo['id']?>)"> <i class="fa fa-trash-o"></i> </a></td>                          
                         </tr>
                     </tbody>

@@ -57,10 +57,9 @@ and open the template in the editor.
                 include '../conecta.php';
                 $seleciona = mysqli_query($conexao, "select * from lutador");
                     while ($campo = mysqli_fetch_array($seleciona)) {?>
-                <option><?=$campo['nome'] ?></option>
-                
+                <option selected=""><?=$campo['cpf'] ?></option>                
                 <?php } ?>
-                <input type="hidden" value="<?=$campo['cpf'] ?>" name="cpfSEL"/>
+                
             </select>
             </div>
             
@@ -71,9 +70,9 @@ and open the template in the editor.
                 include '../conecta.php';
                 $seleciona2 = mysqli_query($conexao, "SELECT * from lutador");
                     while ($campo2 = mysqli_fetch_array($seleciona2)) {?>
-                <option><?=$campo2['nome'] ?></option>
+                <option><?=$campo2['cpf'] ?></option>
                 <?php } ?>
-                <input type="hidden" value="<?=$campo['cpf'] ?>" name="cpfSEL2"/>
+                
             </select>
             </div>
             
@@ -89,12 +88,6 @@ and open the template in the editor.
              <button type="submit" class="btn btn-success">Salvar</button>
         </form>
         </div>
-    <script>
-        $(document).ready(function () { 
-            var $seuCampoCpf = $("#cpf");
-            $seuCampoCpf.mask('000.000.000-00', {reverse: false});
-        });
-    </script>
                   
     </body>
 </html>

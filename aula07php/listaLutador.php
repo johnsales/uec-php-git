@@ -72,7 +72,7 @@
                           <td><?=$campo['peso'] ?></td>
                           <td><?=$campo['categoria'] ?></td>
                           <td  align="center" ><a href="editarLutador.php?editCpf=<?=$campo['cpf'] ?>"> <i class="fa fa-edit"> </i></a></td>
-                          <td  align="center" ><a href="#" onclick="verifica(<?=$campo['cpf']?>)"> <i class="fa fa-trash-o"></i> </a></td>
+                          <td  align="center" ><a href="#" onclick="verificaLutador(<?=$campo['cpf']?>)"> <i class="fa fa-trash-o"></i> </a></td>
                           
                         </tr>
                     </tbody>

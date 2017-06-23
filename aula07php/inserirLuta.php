@@ -4,8 +4,11 @@ include '../conecta.php';
 include_once './Lutador.php';
 include_once './Luta.php';
 
-$desafiado = $_POST['cpfSEL'];
-$desafiante = $_POST['cpfSEL2'];
+//$desafiado = $_POST['cpfSEL'];
+//$desafiante = $_POST['cpfSEL2'];
+$desafiado = $_POST['desafiado'];
+$desafiante = $_POST['desafiante'];
+
 $rounds = $_POST['rounds'];
 $aprovada = $_POST['aprovada'];
 /*

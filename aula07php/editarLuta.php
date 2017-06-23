@@ -17,10 +17,10 @@
         
         <?php
             include '../conecta.php';
-            $recCpf = $_GET['editCpf'];
+            $recId = $_GET['editId'];
             
-            $seleciona = mysqli_query($conexao, "select * from lutador where cpf = {$recCpf}");
-            $campo= mysqli_fetch_array($seleciona);
+            $seleciona = mysqli_query($conexao, "select * from luta where id = {$recId}");
+            $campoLuta = mysqli_fetch_array($seleciona);
         ?>
         
         <div class="container">
@@ -50,43 +50,50 @@
                   </ul>
                 </div>
             </nav>
-              <h2>Edição de Lutadores</h2>
-              <form action="inserirEditarLutador.php" method="post">
+            
+            <h2>Edição de Lutas</h2>
+            
+            <form action="inserirEditarLuta.php" method="post">
             <div class="form-group" style="">
-                <input type="hidden" class="form-control" id="cpf" name="cpf" value="<?=$campo['cpf']?>">
+                <input type="hidden" class="form-control" id="id" name="id" value="<?=$campoLuta['id']?>">
               </div>
-            <div class="form-group" style="">
-                <label for="nome">Nome:</label>
-                <input type="txt" class="form-control" id="nome" name="nome" value="<?=$campo['nome']?>">
-            </div>
             <div class="form-group">
-            <label for="nacionalidade">Nacionalidade:</label>
-            <select type="txt" name="nacionalidade" class="form-control" id="nacionalidade">
-                <option>Argentina</option>
-                <option>Alemanha</option>
-                <option>Australia</option>
-                <option>Brasil</option>
-                <option>Chile</option>
-                <option>Inglaterra</option>
-                <option>Italia</option>
-                <option>Japão</option>
-                <option>Russia</option>
+            <label for="desafiado">Desafiado:</label>
+            <select type="txt" name="desafiado" class="form-control" id="desafiado">
+                <?php 
+                include '../conecta.php';
+                $seleciona = mysqli_query($conexao, "select * from lutador");
+                    while ($campo = mysqli_fetch_array($seleciona)) {?>
+                <option><?=$campo['cpf'] ?></option>                
+                <?php } ?>
+                
             </select>
             </div>
-            <div class="form-group" style="">
-                <label for="idade">Idade:</label>
-                <input type="number" class="form-control" id="idade" name="idade" min="0" value="<?=$campo['idade']?>">
+            
+            <div class="form-group">
+            <label for="desafiante">Desafiante:</label>
+            <select type="txt" name="desafiante" class="form-control" id="desafiante">
+                <?php 
+                include '../conecta.php';
+                $seleciona2 = mysqli_query($conexao, "SELECT * from lutador");
+                    while ($campo2 = mysqli_fetch_array($seleciona2)) {?>
+                <option><?=$campo2['cpf'] ?></option>
+                <?php } ?>
+                
+            </select>
             </div>
+            
             <div class="form-group" style="">
-                <label for="altura">Altura:</label>
-                <input type="" class="form-control" id="altura" name="altura" step="0.01" min="0" value="<?=$campo['altura']?>">
+                <label for="rounds">Rounds:</label>
+                <input type="number" class="form-control" id="rounds" name="rounds" min="0" value="<?=$campoLuta['rounds']?>">
             </div>
+            
             <div class="form-group" style="">
-                <label for="peso">Peso:</label>
-                <input type="number" class="form-control" id="peso" name="peso" step="any" min="0" value="<?=$campo['peso']?>">
+                <label for="aprovada">Aprovada:</label>
+                <input type="text" class="form-control" id="aprovada" name="aprovada" value="<?=$campoLuta['aprovada']?>" readonly="true">
             </div>
              
-                  <a href="listaLutador.php" type="button" class="btn btn-default">Voltar</a>
+             <a href="listaLuta.php" type="button" class="btn btn-default">Voltar</a>
              <button type="submit" class="btn btn-primary">Editar</button>
             </form>
         </div>
